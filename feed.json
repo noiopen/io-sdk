@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "IO-SDK Feed",
+    "home_page_url": "https://github.com/noiopen/io-sdk",
+    "feed_url": "hhttps://github.com/noiopen/io-sdk/feed.json",
+    "items": [
+        {
+            "id": "2",
+            "title": "This is a second item.",
+            "content_text": "This is a second item.",
+            "url": "https://example.org/second-item"
+        },
+        {
+            "id": "1",
+            "title": "This is a second item.",
+            "content_html": "<p>Hello, world!</p>",
+            "url": "https://example.org/initial-post"
+        }
+    ]
+}
