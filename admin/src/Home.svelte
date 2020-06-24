@@ -7,7 +7,7 @@
 
   onMount(get_feed);
   async function get_feed() {
-    let url = "https://raw.githubusercontent.com/pagopa/io-sdk/admin_feed_json/feed.json";
+    let url = "https://raw.githubusercontent.com/pagopa/io-sdk/master/feed.json";
       fetch(url)
       .then(async res => {
         if (res.ok) {
