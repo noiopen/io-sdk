@@ -11,7 +11,6 @@
   let url;
   $: url = base + action;
 
-  let loading = true;
   let state = {};
   let message = "uploading...";
 
@@ -19,7 +18,6 @@
     const res = await fetch(url);
     state = await res.json();
     console.log(state);
-    loading = false;
   }
 
   async function save(data) {
@@ -37,11 +35,9 @@
         } else {
           message = res.statusText
         }
-        loading = false;
       })
       .catch(function(err) {
         message = err.message;
-        loading = false;
       });
   }
 
@@ -55,9 +51,7 @@
 
 <h2>Import</h2>
 <div>
-  {#if loading}
-    <div>loading...</div>
-  {:else if state.form}
+  {#if state.form}
     <ImportForm form={state.form} {url} />
   {:else if state.error}
     <div class="alert alert-danger" role="alert">Error: {state.error}</div>
