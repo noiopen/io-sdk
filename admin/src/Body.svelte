@@ -1,5 +1,5 @@
 <script>
-  export let url = "/app/index.html";
+  export let url = "";
   import { onMount } from "svelte";
   import { Router, Route, navigate } from "svelte-routing";
   import Home from "./Home.svelte";
@@ -11,8 +11,9 @@
   import Send from "./Send.svelte";
   import Ship from "./Ship.svelte";
   import Import from "./Import.svelte";
-  
-  onMount(()=> navigate("/"))
+
+// onMount(() => navigate());
+
 </script>
 
 <section class="row">
