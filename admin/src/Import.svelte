@@ -78,6 +78,11 @@
     {#if !isPreview}
       <ImportData data={state.data} />
       <big><b>Import status: </b>{message}</big>
+      <div>
+        <button type="button" class="btn btn-primary" on:click={start}>
+          Make a new import
+        </button>
+      </div>
     {:else}
       <ImportPreview data={state.data} />
       {#if !loading}
