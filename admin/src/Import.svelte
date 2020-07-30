@@ -66,7 +66,7 @@
     <div>loading...</div>
   {:else if state.form}
     <ImportForm form={state.form} {url} />
-    <input type=checkbox bind:checked={isPreview}> Mostra anteprima
+    <input type=checkbox bind:checked={isPreview}> Show preview
   {:else if state.error}
     <div class="alert alert-danger" role="alert">Error: {state.error}</div>
     <div>
@@ -78,11 +78,16 @@
     {#if !isPreview}
       <ImportData data={state.data} />
       <big><b>Import status: </b>{message}</big>
+      <div>
+        <button type="button" class="btn btn-primary" on:click={start}>
+          Make a new import
+        </button>
+      </div>
     {:else}
       <ImportPreview data={state.data} />
       {#if !loading}
         <button type="button" class="btn btn-primary" on:click={confirm}>
-          Conferma importazione
+          Conferm import
         </button>
       {:else}
         <big><b>Import status: </b>{message}</big>

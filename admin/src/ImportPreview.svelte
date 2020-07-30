@@ -7,7 +7,7 @@
 </script>
 
 <div>
-  <h3>Anteprima importazione</h3>
+  <h3>Preview import</h3>
   <table class="table">
     <thead>
       <tr>
